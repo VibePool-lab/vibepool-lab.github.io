@@ -1,11 +1,26 @@
-<div align="center">
+# VibePool Lab
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+The central hub for VibePool projects. This repository hosts the entry point to our ecosystem of micro-SaaS applications and experimental games.
 
-  <h1>Built with AI Studio</h2>
+## Current Modules
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- **Remote True Value**: Our flagship value assessment engine. Active and operational.
+- **Future Modules**: Coming soon.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Tech Stack
 
-</div>
+- **React 19** + **Vite**
+- **Tailwind CSS**
+- **Framer Motion** for holographic UI effects
+- **Lucide React** for iconography
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+Deploy and tracking information is managed via GitHub Actions.
