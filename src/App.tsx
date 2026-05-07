@@ -80,7 +80,7 @@ export default function App() {
     {
       id: 'remote-true-value',
       name: 'Remote True Value',
-      description: 'The definitive value assessment engine for remote systems. Now fully operational in the VibePool ecosystem.',
+      description: 'The definitive value assessment tool when it comes to comparing remote work VS commute. The bigger picture at hand',
       icon: Layers,
       color: 'cyan',
       status: 'active',
