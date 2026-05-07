@@ -59,7 +59,6 @@ const getAI = () => {
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'hub' | 'terminal'>('hub');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   
   // AI Module State
   const [messages, setMessages] = useState<Message[]>([
@@ -80,7 +79,7 @@ export default function App() {
     {
       id: 'remote-true-value',
       name: 'Remote True Value',
-      description: 'The definitive value assessment tool when it comes to comparing remote work VS commute. The bigger picture at hand',
+      description: 'The definitive value assessment engine for remote systems. Now fully operational in the VibePool ecosystem.',
       icon: Layers,
       color: 'cyan',
       status: 'active',
@@ -213,44 +212,6 @@ export default function App() {
       </header>
 
       <div className="flex-1 flex overflow-hidden">
-        {/* Hub Sidebar */}
-        <aside className={`${isSidebarOpen ? 'w-64' : 'w-0'} border-r border-slate-900 bg-[#080A12]/50 transition-all duration-300 overflow-hidden hidden lg:flex flex-col`}>
-          <div className="p-6 space-y-8">
-            <div>
-              <h3 className="text-[10px] font-black uppercase tracking-[.2em] text-slate-600 mb-4 px-2">Lab Telemetry</h3>
-              <div className="space-y-3">
-                {[
-                  { label: "Uptime", val: "12d 4h 22m", color: "text-emerald-400" },
-                  { label: "Request Load", val: "Low", color: "text-cyan-400" },
-                  { label: "Security Path", val: "Encrypted", color: "text-blue-400" }
-                ].map((s, i) => (
-                  <div key={i} className="px-3 py-2 rounded bg-slate-900/40 border border-slate-800/50 flex justify-between items-center group cursor-default">
-                    <span className="text-[10px] text-slate-500 group-hover:text-slate-400 transition-colors uppercase font-mono">{s.label}</span>
-                    <span className={`text-[10px] font-mono ${s.color} font-bold`}>{s.val}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-[10px] font-black uppercase tracking-[.2em] text-slate-600 mb-4 px-2">Recent Logs</h3>
-              <div className="space-y-2">
-                {[
-                  "Hub connected to main-loop",
-                  "Remote True Value synced",
-                  "AI core handshake complete",
-                  "New module 'Game Alpha' queued"
-                ].map((log, i) => (
-                  <div key={i} className="text-[9px] font-mono text-slate-500 flex gap-2 leading-relaxed">
-                    <span className="text-cyan-500/50">[{new Date().getHours()}:{i*2}]</span>
-                    <span>{log}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </aside>
-
         {/* Main Workspace */}
         <main className="flex-1 relative overflow-y-auto bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900/20 via-transparent to-transparent">
           {/* Subtle Background Elements */}
