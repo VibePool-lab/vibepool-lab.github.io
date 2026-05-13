@@ -96,13 +96,14 @@ export default function App() {
       type: 'app'
     },
     {
-      id: 'placeholder-2',
-      name: 'Module_03',
-      description: 'Reserved for upcoming mini-game or physics-based experiment.',
+      id: 'star-sequence',
+      name: 'Star Sequence',
+      description: 'A mind-bending pattern recognition mini-game. Follow the cosmic sequence and master the stars.',
       icon: Gamepad2,
       color: 'emerald',
-      status: 'planned',
-      type: 'game'
+      status: 'active',
+      type: 'game',
+      url: 'https://vibepool-lab.github.io/StarSequence/'
     },
     {
       id: 'placeholder-3',
@@ -301,7 +302,7 @@ export default function App() {
                     ))}
 
                     {/* Add Module Placeholder */}
-                    <div className="group border border-dashed border-slate-800 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 hover:border-slate-600 transition-all cursor-pointer min-h-[200px]">
+                    <div className="group border border-dashed border-slate-800 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 hover:border-slate-600 transition-all cursor-pointer">
                       <div className="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-600 group-hover:text-slate-300 group-hover:scale-110 transition-all">
                         <Plus size={20} />
                       </div>
@@ -378,7 +379,7 @@ export default function App() {
                                 }
                               }}
                               placeholder="Enter lab command..."
-                              className="w-full bg-slate-950 border border-slate-800 rounded-xl py-3 px-4 text-sm font-mono focus:ring-1 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all resize-none outline-none pr-12"
+                              className="w-full bg-slate-950 border border-slate-800 rounded-xl py-3 px-4 text-sm font-mono focus:ring-1 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all resize-none"
                             />
                             <button 
                               onClick={handleSendMessage}
@@ -425,7 +426,7 @@ export default function App() {
                  {showLegal === 'privacy' ? (
                    <>
                      <p>VibePool Lab ("we", "us", "our") operates this hub. This policy describes how we collect and use your data.</p>
-                     <p><strong>1. Data Collection:</strong> We use Google Analytics 4 (GA4) to track site usage patterns. This helps us understand which features are most useful. No personally identifiable information is stored by us directly.</p>
+                     <p><strong>1. Data Collection:</strong> We use Google Analytics 4 (GA4) to track site usage patterns. This helps us understand which features are most useful. No personally identifiable information is collected.</p>
                      <p><strong>2. Advertising:</strong> We use Google AdSense to serve advertisements. AdSense uses cookies to serve ads based on your visit to this and other sites.</p>
                      <p><strong>3. Security:</strong> We implement standard security protocols to protect our platform integrity.</p>
                    </>
@@ -433,7 +434,7 @@ export default function App() {
                    <>
                      <p>By using VibePool Lab, you agree to these terms.</p>
                      <p><strong>1. Use of Service:</strong> This platform is provided for informational and experimental purposes. All tools are provided "as-is" without warranty.</p>
-                     <p><strong>2. Third-Party Links:</strong> Our platform contains links to external sites (e.g., Remote True Value). We are not responsible for the content or privacy practices of these third-party platforms.</p>
+                     <p><strong>2. Third-Party Links:</strong> Our platform contains links to external sites (e.g., Remote True Value). We are not responsible for the content or privacy practices of external sites.</p>
                      <p><strong>3. Intellectual Property:</strong> All designs and code within the VibePool Lab ecosystem are protected by copyright laws.</p>
                    </>
                  )}
@@ -465,4 +466,3 @@ export default function App() {
     </div>
   );
 }
-
